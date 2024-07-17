@@ -57,9 +57,9 @@
     <div class="content">
         <div class="container my-4">
             <header class="d-flex justify-content-between my-4">
-                <h1>Book Details</h1>
+                <h1>Details Livre</h1>
                 <div>
-                    <a href="../index.php" class="btn btn-primary">Back</a>
+                    <a href="../index.php" class="btn btn-primary">Retour</a>
                 </div>
             </header>
             <div class="book-details p-5 my-4">
@@ -75,7 +75,7 @@
                      <p><?php echo $row["titre"]; ?></p>
                      <h3>Description:</h3>
                      <p><?php echo $row["description"]; ?></p>
-                     <h3>Author:</h3>
+                     <h3>Auteur:</h3>
                      <p><?php echo $row["auteur"]; ?></p>
                      <h3>Type:</h3>
                      <p><?php echo $row["type"]; ?></p>

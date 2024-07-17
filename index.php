@@ -65,9 +65,9 @@
     <div class="content">
         <div class="container my-4">
             <header class="d-flex justify-content-between my-4">
-                <h1>Book List</h1>
+                <h1>Liste Des Livres</h1>
                 <div>
-                    <a href="interface/ajouter.php" class="btn btn-primary">Add New Book</a>
+                    <a href="interface/ajouter.php" class="btn btn-primary">Ajouter Livre</a>
                 </div>
             </header>
             <?php
@@ -112,8 +112,8 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Title</th>
-                    <th>Author</th>
+                    <th>Titre</th>
+                    <th>Auteur</th>
                     <th>Type</th>
                     <th>Action</th>
                 </tr>
