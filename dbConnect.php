@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$User = "root";
+$user = "root";
 $password = "";
-$name = "gestion_bib";
+$name = "blist";
 
 $conn = mysqli_connect($servername, $user, $password, $name);
 if (!$conn) {
