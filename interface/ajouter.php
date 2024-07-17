@@ -66,10 +66,10 @@
             <header class="d-flex justify-content-between my-4">
                 <h1>Add New Book</h1>
                 <div>
-                    <a href="index.php" class="btn btn-primary">Back</a>
+                    <a href="../index.php" class="btn btn-primary">Back</a>
                 </div>
             </header>
-            <form action="database/crud.php" method="post">
+            <form action="../database/crud.php" method="post">
                 <div class="form-element my-4">
                     <input type="text" class="form-control" name="title" placeholder="Book Title:">
                 </div>

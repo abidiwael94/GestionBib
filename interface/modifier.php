@@ -66,23 +66,23 @@
             <header class="d-flex justify-content-between my-4">
                 <h1>Edit Book</h1>
                 <div>
-                    <a href="index.php" class="btn btn-primary">Back</a>
+                    <a href="../index.php" class="btn btn-primary">Back</a>
                 </div>
             </header>
-            <form action="database/crud.php" method="post">
+            <form action="../database/crud.php" method="post">
                 <?php 
                 if (isset($_GET['id'])) {
-                    include("dbConnect.php");
+                    include("../database/dbConnect.php");
                     $id = $_GET['id'];
-                    $sql = "SELECT * FROM books WHERE id=$id";
+                    $sql = "SELECT * FROM livre WHERE id=$id";
                     $result = mysqli_query($conn,$sql);
                     $row = mysqli_fetch_array($result);
                     ?>
                     <div class="form-element my-4">
-                        <input type="text" class="form-control" name="title" placeholder="Book Title:" value="<?php echo $row["title"]; ?>">
+                        <input type="text" class="form-control" name="title" placeholder="Titre de livre:" value="<?php echo $row["titre"]; ?>">
                     </div>
                     <div class="form-element my-4">
-                        <input type="text" class="form-control" name="author" placeholder="Author Name:" value="<?php echo $row["author"]; ?>">
+                        <input type="text" class="form-control" name="author" placeholder="nom auteur:" value="<?php echo $row["auteur"]; ?>">
                     </div>
                     <div class="form-element my-4">
                         <select name="type" id="" class="form-control">
@@ -94,7 +94,7 @@
                         </select>
                     </div>
                     <div class="form-element my-4">
-                        <textarea name="description" id="" class="form-control textarea-control" placeholder="Book Description:"><?php echo $row["description"]; ?></textarea>
+                        <textarea name="description" id="" class="form-control textarea-control" placeholder="Description de livre:"><?php echo $row["description"]; ?></textarea>
                     </div>
                     <input type="hidden" value="<?php echo $id; ?>" name="id">
                     <div class="form-element my-4">

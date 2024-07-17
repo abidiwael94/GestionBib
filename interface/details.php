@@ -59,30 +59,30 @@
             <header class="d-flex justify-content-between my-4">
                 <h1>Book Details</h1>
                 <div>
-                    <a href="index.php" class="btn btn-primary">Back</a>
+                    <a href="../index.php" class="btn btn-primary">Back</a>
                 </div>
             </header>
             <div class="book-details p-5 my-4">
                 <?php
-                include("dbConnect.php");
+                include("../database/dbConnect.php");
                 $id = $_GET['id'];
                 if ($id) {
-                    $sql = "SELECT * FROM books WHERE id = $id";
+                    $sql = "SELECT * FROM livre WHERE id = $id";
                     $result = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_array($result)) {
                      ?>
                      <h3>Title:</h3>
-                     <p><?php echo $row["title"]; ?></p>
+                     <p><?php echo $row["titre"]; ?></p>
                      <h3>Description:</h3>
                      <p><?php echo $row["description"]; ?></p>
                      <h3>Author:</h3>
-                     <p><?php echo $row["author"]; ?></p>
+                     <p><?php echo $row["auteur"]; ?></p>
                      <h3>Type:</h3>
                      <p><?php echo $row["type"]; ?></p>
                      <?php
                     }
                 } else {
-                    echo "<h3>No books found</h3>";
+                    echo "<h3>pas de livre</h3>";
                 }
                 ?>
             </div>

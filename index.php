@@ -122,14 +122,14 @@
             
             <?php
             include('database/dbConnect.php');
-            $sqlSelect = "SELECT * FROM books";
+            $sqlSelect = "SELECT * FROM livre";
             $result = mysqli_query($conn,$sqlSelect);
             while($data = mysqli_fetch_array($result)){
                 ?>
                 <tr>
                     <td><?php echo $data['id']; ?></td>
-                    <td><?php echo $data['title']; ?></td>
-                    <td><?php echo $data['author']; ?></td>
+                    <td><?php echo $data['titre']; ?></td>
+                    <td><?php echo $data['auteur']; ?></td>
                     <td><?php echo $data['type']; ?></td>
                     <td>
                         <a href="interface/details.php?id=<?php echo $data['id']; ?>" class="btn btn-info">Read More</a>
