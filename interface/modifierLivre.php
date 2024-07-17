@@ -69,7 +69,7 @@
                     <a href="../index.php" class="btn btn-primary">Retour</a>
                 </div>
             </header>
-            <form action="../database/crud.php" method="post">
+            <form action="../database/crudLivre.php" method="post">
                 <?php 
                 if (isset($_GET['id'])) {
                     include("../database/dbConnect.php");

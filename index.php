@@ -67,7 +67,7 @@
             <header class="d-flex justify-content-between my-4">
                 <h1>Liste Livres</h1>
                 <div>
-                    <a href="interface/ajouter.php" class="btn btn-primary">Ajouter Livre</a>
+                    <a href="interface/ajouterLivre.php" class="btn btn-primary">Ajouter Livre</a>
                 </div>
             </header>
             <?php
@@ -132,9 +132,9 @@
                     <td><?php echo $data['auteur']; ?></td>
                     <td><?php echo $data['type']; ?></td>
                     <td>
-                        <a href="interface/details.php?id=<?php echo $data['id']; ?>" class="btn btn-info">Read More</a>
-                        <a href="interface/modifier.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
-                        <a href="database/crud.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a>
+                        <a href="interface/detailsLivre.php?id=<?php echo $data['id']; ?>" class="btn btn-info">Read More</a>
+                        <a href="interface/modifierLivre.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
+                        <a href="database/crudLivre.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <?php
