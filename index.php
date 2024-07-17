@@ -61,13 +61,13 @@
     </style>
 </head>
 <body>
-    <?php include('sidebar.php'); ?>
+    <?php include('interface/sidebar.php'); ?>
     <div class="content">
         <div class="container my-4">
             <header class="d-flex justify-content-between my-4">
                 <h1>Book List</h1>
                 <div>
-                    <a href="ajouter.php" class="btn btn-primary">Add New Book</a>
+                    <a href="interface/ajouter.php" class="btn btn-primary">Add New Book</a>
                 </div>
             </header>
             <?php
@@ -121,7 +121,7 @@
             <tbody>
             
             <?php
-            include('dbConnect.php');
+            include('database/dbConnect.php');
             $sqlSelect = "SELECT * FROM books";
             $result = mysqli_query($conn,$sqlSelect);
             while($data = mysqli_fetch_array($result)){
@@ -132,9 +132,9 @@
                     <td><?php echo $data['author']; ?></td>
                     <td><?php echo $data['type']; ?></td>
                     <td>
-                        <a href="details.php?id=<?php echo $data['id']; ?>" class="btn btn-info">Read More</a>
-                        <a href="modifier.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
-                        <a href="crud.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a>
+                        <a href="interface/details.php?id=<?php echo $data['id']; ?>" class="btn btn-info">Read More</a>
+                        <a href="interface/modifier.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
+                        <a href="database/crud.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <?php
