@@ -69,7 +69,7 @@
                     <a href="index.php" class="btn btn-primary">Back</a>
                 </div>
             </header>
-            <form action="crud.php" method="post">
+            <form action="database/crud.php" method="post">
                 <div class="form-element my-4">
                     <input type="text" class="form-control" name="title" placeholder="Book Title:">
                 </div>

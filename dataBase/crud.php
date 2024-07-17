@@ -13,7 +13,7 @@ if (isset($_POST["create"])) {
     
     if(mysqli_query($conn, $sqlInsert)){
         $_SESSION["create"] = "Book Added Successfully!";
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit();
     } else {
         die("Error: " . mysqli_error($conn));
@@ -32,7 +32,7 @@ if (isset($_POST["edit"])) {
     
     if(mysqli_query($conn, $sqlUpdate)){
         $_SESSION["update"] = "Book Updated Successfully!";
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit();
     } else {
         die("Error: " . mysqli_error($conn));
@@ -46,7 +46,7 @@ if (isset($_GET['id'])) {
     
     if(mysqli_query($conn, $sqlDelete)){
         $_SESSION["delete"] = "Book Deleted Successfully!";
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit();
     } else {
         die("Error: " . mysqli_error($conn));
