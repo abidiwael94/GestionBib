@@ -65,9 +65,9 @@
     <div class="content">
         <div class="container my-4">
             <header class="d-flex justify-content-between my-4">
-                <h1>Liste Livres</h1>
+                <h1>Liste Adherents</h1>
                 <div>
-                    <a href="interface/ajouter.php" class="btn btn-primary">Ajouter Livre</a>
+                    <a href="interface/ajouterAdherent.php" class="btn btn-primary">Ajouter Adherent</a>
                 </div>
             </header>
             <?php
@@ -112,9 +112,9 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Titre</th>
-                    <th>Auteur</th>
-                    <th>Type</th>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -122,19 +122,18 @@
             
             <?php
             include('database/dbConnect.php');
-            $sqlSelect = "SELECT * FROM livre";
+            $sqlSelect = "SELECT * FROM adherent";
             $result = mysqli_query($conn,$sqlSelect);
             while($data = mysqli_fetch_array($result)){
                 ?>
                 <tr>
                     <td><?php echo $data['id']; ?></td>
-                    <td><?php echo $data['titre']; ?></td>
-                    <td><?php echo $data['auteur']; ?></td>
-                    <td><?php echo $data['type']; ?></td>
+                    <td><?php echo $data['nom']; ?></td>
+                    <td><?php echo $data['email']; ?></td>
+                    <td><?php echo $data['mobile']; ?></td>
                     <td>
-                        <a href="interface/details.php?id=<?php echo $data['id']; ?>" class="btn btn-info">Read More</a>
-                        <a href="interface/modifier.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
-                        <a href="database/crud.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a>
+                        <a href="interface/modifierAdherent.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Modifier</a>
+                        <a href="database/crudAdherent.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">Supprimer</a>
                     </td>
                 </tr>
                 <?php
