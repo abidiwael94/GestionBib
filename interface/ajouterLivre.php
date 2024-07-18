@@ -79,14 +79,14 @@
                 <div class="form-element my-4">
                     <select name="type" id="" class="form-control">
                         <option value="">Choisir type</option>
-                        <option value="Adventure">Adventure</option>
+                        <option value="Adventure">Aventure</option>
                         <option value="Crime">Crime</option>
-                        <option value="Fantasy">Fantasy</option>
-                        <option value="Horror">Horror</option>
+                        <option value="Fantasy">Fantaisie</option>
+                        <option value="Horror">Horreur</option>
                     </select>
                 </div>
                 <div class="form-element my-4">
-                    <textarea name="description" id="" class="form-control textarea-control" placeholder="Book Description:"></textarea>
+                    <textarea name="description" id="" class="form-control textarea-control" placeholder="Description livre:"></textarea>
                 </div>
                 <div class="form-element my-4">
                     <input type="submit" name="create" value="Ajouter livre" class="btn btn-primary">
