@@ -132,9 +132,9 @@
                     <td><?php echo $data['auteur']; ?></td>
                     <td><?php echo $data['type']; ?></td>
                     <td>
-                        <a href="interface/detailsLivre.php?id=<?php echo $data['id']; ?>" class="btn btn-info">Read More</a>
-                        <a href="interface/modifierLivre.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
-                        <a href="database/crudLivre.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a>
+                        <a href="interface/detailsLivre.php?id=<?php echo $data['id']; ?>" class="btn btn-info">Plus</a>
+                        <a href="interface/modifierLivre.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Modifier</a>
+                        <a href="database/crudLivre.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">Supprimer</a>
                     </td>
                 </tr>
                 <?php
