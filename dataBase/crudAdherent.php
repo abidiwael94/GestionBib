@@ -6,7 +6,7 @@ include('dbConnect.php');
 if (isset($_POST["create"])) {
     $nom = mysqli_real_escape_string($conn, $_POST["nom"]);
     $email = mysqli_real_escape_string($conn, $_POST["email"]);
-    $mobile = (int)$mobile;
+    $mobile = $_POST["mobile"];
 
     $sqlInsert = "INSERT INTO adherent(nom, email, mobile) VALUES ('$nom','$email','$mobile')";
     
